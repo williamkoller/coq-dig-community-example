@@ -35,7 +35,6 @@ export class CatsController {
   }
 
   @Delete(':id')
-  @Get()
   @HttpCode(HttpStatus.OK)
   public delete(@Param('id') id: number): { message: string } {
     return this.deleteCatService.deleteCat(id);
